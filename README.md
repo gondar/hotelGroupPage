@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Guestline - Hotel Group Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Solution to guestline hotel group page solution. To run application type:
 
-## Available Scripts
+`npm install`
+`npm start`
 
-In the project directory, you can run:
+## The challenge
 
-### `npm start`
+Your challenge is to product a page showing a list of hotels and their rooms.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Please use [React](https://reactjs.org) and (preferably) [Typescript](https://www.typescriptlang.org/) to implement this challenge as this is our platform of choice. There are no other restrictions on technology choices.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To get the information to present, you will need to query the following API:
 
-### `npm test`
+`https://obmng.dbm.guestline.net/api/hotels?collection-id=OBMNG`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This returns a list of hotels, with an Id. The Id can be used to query this query for the room types:
 
-### `npm run build`
+`https://obmng.dbm.guestline.net/api/roomRates/OBMNG/[hotelId]` for example, `https://obmng.dbm.guestline.net/api/roomRates/OBMNG/OBMNG1`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Guests using site should be able to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Filter based on the star rating of the hotel, that is, given I have selected 3 stars, then I am able to see all hotels with a 3 and above rating.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Filter based on the capacity of the room. That is, when I have selected 1 adult and 1 child then I am able to see all rooms with at least that capacity.
 
-### `npm run eject`
+For other requirements, please see the attached mockup sketch. Note that the mockup attempts to show hotel images. The the URLs can be found in the response to the initial request.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Submitting your solution
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+We expect to build your submission locally and review it's code. If you host it publicly let us know, but that's not necessary. Please provide us with instructions how to build it in a readme file `Readme.md`. We will always provide feedback about your work.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Got feedback for us?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+We love receiving feedback! We're always looking to improve our recruitment process. So if you have anything you'd like to mention, please email talent[at]guestline[dot]com.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Good Luck!** 🚀
